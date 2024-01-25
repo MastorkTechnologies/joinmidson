@@ -1,0 +1,229 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-family: "Handlee";
+  height: 6rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #f99820;
+  color: white;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 6rem;
+  width: 20%;
+  margin-left: 0;
+  float: left;
+}
+
+.topimg {
+  width: 50%;
+  float: right;
+  height: 6rem;
+}
+
+.bottomimg {
+  width: 70%;
+  margin: auto;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.footer {
+  font-family: "Handlee";
+  height: 8rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #f99820;
+  color: white;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  color: #09264a;
+  border: 1px solid #36454f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.label {
+  color: black;
+  margin: 0.5rem 0;
+}
+
+.fieldDiv {
+  width: 100%;
+}
+
+input,
+select {
+  width: 97%;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  padding: 0.5rem;
+}
+
+select {
+  width: 99%;
+}
+
+input:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.left-section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.left-section > form {
+  width: 90%;
+}
+
+.right-section {
+  width: 100%;
+  border: 5px;
+  border-color: #007bff;
+  margin: auto auto auto 0;
+}
+
+form > h3 {
+  text-align: center;
+  margin: auto;
+}
+
+.middle-section {
+  margin: 2rem auto auto auto;
+  width: 70%;
+}
+
+.bottom-section {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 70%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+}
+
+.box {
+  color: #09264a;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: solid 1px #36454f;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 80%;
+}
+
+.button {
+  background-color: white;
+  border: solid 1px orangered;
+  width: 100%;
+  color: orangered;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 500ms;
+}
+
+.button:hover {
+  color: white;
+  background-color: orangered;
+  border: solid 1px white;
+}
+
+@media (max-width: 768px) {
+  .top-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .right-section {
+    margin: 1rem auto 1rem auto;
+  }
+}
+
+/* 
+
+.info {
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+h2 {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+  }
+
+  .left-section,
+  .right-section {
+    width: 40%;
+  }
+
+  .bottom-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
