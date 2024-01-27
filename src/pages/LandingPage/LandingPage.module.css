@@ -175,6 +175,23 @@ img {
 }
 
 @media (max-width: 768px) {
+  .header {
+    height: 4rem;
+  }
+
+  .logo {
+    height: 4rem;
+    width: 25%;
+    margin-left: 0;
+    float: left;
+  }
+
+  .topimg {
+    width: 75%;
+    float: right;
+    height: 4rem;
+  }
+
   .top-section {
     display: flex;
     flex-direction: column-reverse;
