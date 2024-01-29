@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const LandingPage = () => {
-  const domain = `https://joinmidson-ochre.vercel.app`;
+  const domain = `https://lrd.midsongroup.com`;
   const [whatsAppNumber, setWhatsAppNumber] = useState("");
   const [formFields, setFormFields] = useState([
     { label: "Name", type: "text", name: "name" },
