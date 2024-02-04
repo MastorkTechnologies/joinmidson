@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./LandingPage.module.css";
 import { db } from "../../firebase";
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 
@@ -202,6 +202,23 @@ const LandingPage = () => {
           referBy: referBy,
         };
 
+        if (docSnap.exists()) {
+          if (newUser.phoneNumber && newUser.phoneNumber.length === 10) {
+            if (docSnap.data()?.phoneNumbers?.includes(newUser.phoneNumber)) {
+              console.log(newUser.phoneNumber);
+              toast.error("This phone number already exists!");
+              return;
+            } else {
+              await updateDoc(docRef, {
+                phoneNumbers: arrayUnion(newUser.phoneNumber),
+              });
+            }
+          } else {
+            toast.error("Phone Number must be 10 digits long!");
+            return;
+          }
+        }
+
         createUser(createdUserID, newUser);
 
         if (createdUserID !== null) {
@@ -273,6 +290,25 @@ const LandingPage = () => {
           },
         };
 
+        const docRef = doc(db, "meta", "phoneNumbers");
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          if (newUser.phoneNumber && newUser.phoneNumber.length === 10) {
+            if (docSnap.data()?.phoneNumbers?.includes(newUser.phoneNumber)) {
+              console.log(newUser.phoneNumber);
+              toast.error("This phone number already exists!");
+              return;
+            } else {
+              await updateDoc(docRef, {
+                phoneNumbers: arrayUnion(newUser.phoneNumber),
+              });
+            }
+          } else {
+            toast.error("Phone Number must be 10 digits long!");
+            return;
+          }
+        }
         createUser(createdUserID, newUser);
         const text = createMessage(newUser);
 
