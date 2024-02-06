@@ -356,7 +356,9 @@ const LandingPage = () => {
       </div>
       <div className={styles["middle-section"]}>
         <form onSubmit={handleSubmit}>
-          <h3>Register!</h3>
+          <h4>
+            I am interested to know more about Loan Against Recurring Deposit
+          </h4>
           {formFields.map((field) => (
             <div className={styles["fieldDiv"]} key={field.name}>
               <label className={styles["label"]}>{field.label}:</label>
